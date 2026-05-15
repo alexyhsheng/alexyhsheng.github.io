@@ -121,11 +121,13 @@ a {
 }
 
 .reading-list {
+  font-size: 18px;
   margin-top: 0;
   padding-left: 22px;
 }
 
 .reading-list li {
+  font-size: 18px;
   margin-bottom: 6px;
 }
 
@@ -133,4 +135,9 @@ a {
   border: none;
   border-top: 1px solid #666;
   margin: 18px 0;
+}
+
+.translation {
+  color: #666;
+  font-size: 0.85em;
 }
