@@ -13,7 +13,7 @@ body {
 }
 
 .page {
-  max-width: 1800px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 10px 24px 20px 24px;
 }
@@ -140,4 +140,241 @@ a {
 .translation {
   color: #666;
   font-size: 0.85em;
+}
+
+blockquote {
+  /* 0 top/bottom margin, 12% left/right margin for that dramatic indent */
+  margin: 30px 7%; 
+  padding: 0;
+  /* font-style: italic; */
+  color: #222222; /* Slightly softer than pure black for a literary feel */
+  line-height: 1.45;
+  text-align: justify; /* Optional: cleans up the edges of the block */
+}
+
+/* On smaller screens, massive indents will squish the text too much */
+@media (max-width: 900px) {
+  blockquote {
+    margin: 28px 6%; /* Reduces the indent on mobile so it stays readable */
+    font-size: 18px;
+  }
+}
+
+/* Enhances readability for deep reading */
+main p {
+  text-align: justify;
+}
+
+/* 文字居中 */
+.text-center {
+  text-align: center;
+}
+
+/* 文字右对齐 */
+.text-right {
+  text-align: right;
+}
+
+h3 {
+  font-size: 150%; /* Slightly smaller than your 200% H2 title */
+  margin: 100px 0 50px 0; /* Generous top margin to separate sections, smaller bottom margin */
+  font-weight: bold;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 900px) {
+  h3 {
+    font-size: 175%; /* Scales slightly up for mobile readability, matching your layout choices */
+    margin: 27px 0 15px 0;
+  }
+}
+
+.epigraph {
+  max-width: 2000px;
+  margin: 0 0 60px auto; /* Aligns the epigraph block to the right */
+  /* padding-left: 20px;
+  /* border-left: 2px solid #666; /* Subtle left border to anchor it */
+}
+
+.epigraph-text {
+  font-size: 30px; /* Slightly smaller than your 20px body text */
+  font-family: Georgia, serif; /* Matches your essay content font for a cohesive look */
+  margin-bottom: 6px !important;
+  line-height: 1.4;
+  /* font-style: italic; */
+}
+
+.epigraph-source {
+  font-size: 30px;
+  font-family: Georgia, serif; /* Matches your essay content font for a cohesive look */
+  /* color: #666; /* Matches your translation class color */
+  text-align: right;
+  margin: 0 !important;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 900px) {
+  .epigraph {
+    max-width: 100%;
+    margin: 0 0 28px 0; /* Left-aligns it on mobile for better readability */
+  }
+}
+
+.essay-content {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  line-height: 1.5; /* Bumping this slightly from 1.35 makes Georgia look incredibly elegant */
+}
+
+.quote-translation {
+  display: block;      /* Forces it onto a new line below the Chinese text */
+  margin-top: 14px;    /* Creates a small gap between the original and translation */
+  /* font-size: 0.85em;   /* Makes it slightly smaller and elegant */
+  color: #555555;         /* Elegant muted gray */
+  font-family: Georgia, serif; /* Optional: switches back to sans-serif for contrast */
+}
+
+/* Style for the footnote number in the text */
+sup a {
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 0 2px;
+}
+
+/* Style for the footnotes container at the bottom */
+.footnotes {
+  font-size: 25px; /* Slightly smaller than your 20px body text */
+  line-height: 1.35;
+  color: #222222; /* The soft, lighter gray you chose earlier */
+  font-family: Arial, Helvetica, sans-serif; /* Clean sans-serif for notes */
+}
+
+.footnotes ol {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.footnotes li {
+  margin-bottom: 10px;
+}
+
+/* Style for the return arrow */
+.reversefootnote {
+  text-decoration: none;
+  margin-left: 4px;
+  color: rgb(166, 0, 255);
+}
+.reversefootnote:hover {
+  text-decoration: underline;
+}
+
+/* Fixes the uneven line height caused by superscripts */
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em; /* Manually shifts the number up without expanding the line */
+}
+
+/* Optional styling to make the footnote links slightly more elegant */
+sup a {
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 0 1px;
+}
+
+/* Creates custom vertical spacing between essay paragraphs */
+.essay-content p {
+  margin-top: 0;
+  margin-bottom: 27px; /* Increases the gap between paragraphs from 18px to 24px */
+}
+
+/* Ensures special elements like translations or epigraph sources don't break due to this rule */
+.essay-content .epigraph p,
+.essay-content .quote-translation {
+  margin-bottom: inherit; 
+}
+
+.essay-content blockquote {
+  margin-top: 0;
+  margin-bottom: 24px; /* Matches your body paragraph spacing */
+}
+
+.essay-content .quote-translation {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 24px; /* Matches your body paragraph spacing */
+}
+
+.essay-content .epigraph p {
+  margin-top: 0;
+  margin-bottom: 24px; /* Matches your body paragraph spacing */
+}
+
+
+/* Styling for essay images */
+.essay-figure {
+  margin: 50px auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.essay-figure img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 2px; /* Slightly softens the sharp edges */
+}
+
+.essay-figure figcaption {
+  margin-top: 12px;
+  font-size: 1.5rem;
+  color: #666; /* Elegant gray for captions */
+  font-style: italic;
+}
+
+/* Base wrapper for a group of images */
+.image-grid {
+  display: grid;
+  gap: 16px; /* Spacing between the photos */
+  margin: 50px auto;
+  max-width: 100%;
+}
+
+/* Ensure images inside look nice and behave properly */
+.image-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Keeps images beautifully cropped if aspect ratios differ */
+  border-radius: 2px;
+}
+
+.image-grid figcaption {
+  margin-top: 8px;
+  font-size: 1.5rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Desktop Layout Adjustments (Screens wider than 600px) */
+@media (min-width: 600px) {
+  .image-grid.cols-2 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns at 50% each */
+  }
+  
+  .image-grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns at ~33% each */
+  }
+  
+  .image-grid.cols-4 {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns at 25% each */
+  }
 }
