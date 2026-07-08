@@ -134,7 +134,8 @@ a {
 .reading-divider {
   border: none;
   border-top: 1px solid #666;
-  margin: 18px 0;
+  margin-top: 140px;    /* Greatly increases space after the last body sentence */
+  margin-bottom: 40px;  /* Space between the line and the first footnote */
 }
 
 .translation {
