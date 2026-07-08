@@ -1,22 +1,124 @@
+/* ==========================================================================
+   Typography + Layout System
+   --------------------------------------------------------------------------
+   To change the typography of one page, edit only the page block below:
+   body.page-index, body.page-essay, body.page-writing, or body.page-reading.
+   ========================================================================== */
+
+/* 1. Site-wide design tokens */
+:root {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --page-bg: #f0f4ff;
+  --text-color: #000;
+  --muted-text: #666;
+  --soft-text: #222;
+  --link-color: rgb(166, 0, 255);
+  --rule-color: #666;
+
+  --page-max-width: 2000px;
+  --page-padding: 10px 50px 20px 50px;
+
+  --site-title-size: 300%;
+  --tiny-text-size: 0.8em;
+
+  /* Default content typography. Individual pages override these below. */
+  --content-font: var(--font-sans);
+  --content-size: 20px;
+  --content-line-height: 1.45;
+  --paragraph-gap: 18px;
+  --paragraph-align: left;
+  --list-gap: 24px;
+
+  --h2-size: 2em;
+  --h2-margin: 28px 0 12px 0;
+  --h3-size: 1.5em;
+  --h3-margin: 60px 0 30px 0;
+
+  --reading-list-size: 17px;
+  --reading-list-gap: 8px;
+
+  --blockquote-margin: 30px 7%;
+  --blockquote-line-height: 1.45;
+
+  --caption-size: 1rem;
+  --footnote-size: 0.9em;
+}
+
+/* 2. Page-specific typography options */
+body.page-index {
+  --content-font: var(--font-sans);
+  --content-size: 25px;
+  --content-line-height: 1.5;
+  --paragraph-gap: 18px;
+  --paragraph-align: left;
+  --tiny-text-size: 25px;
+}
+
+body.page-essay {
+  --content-font: var(--font-serif);
+  --content-size: 25px;
+  --content-line-height: 1.5;
+  --paragraph-gap: 27px;
+  --paragraph-align: justify;
+  --h3-size: 28px;
+  --h3-margin: 60px 0 30px 0;
+  --caption-size: 1rem;
+  --footnote-size: 0.86em;
+}
+
+body.page-writing {
+  --content-font: var(--font-sans);
+  --content-size:25px;
+  --content-line-height: 1.5;
+  --paragraph-gap: 18px;
+  --paragraph-align: left;
+  --tiny-text-size: 24px;
+}
+
+body.page-reading {
+  --content-font: var(--font-sans);
+  --content-size: 25px;
+  --content-line-height: 1.4;
+  --paragraph-gap: 18px;
+  --paragraph-align: left;
+  --reading-list-size: 20px;
+  --reading-list-gap: 8px;
+}
+
+/* ==========================================================================
+   Base page structure
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #f0f4ff;
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: 1.35;
-}
-
-.tiny-text {
-  font-size: 25px;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-family: var(--font-sans);
 }
 
 .page {
-  max-width: 2000px;
+  max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 10px 24px 20px 24px;
+  padding: var(--page-padding);
 }
+
+main {
+  width: 100%;
+  font-family: var(--content-font);
+  font-size: var(--content-size);
+  line-height: var(--content-line-height);
+}
+
+/* ==========================================================================
+   Header and navigation
+   ========================================================================== */
 
 .header {
   display: flex;
@@ -26,8 +128,12 @@ body {
 }
 
 .site-title {
-  font-size: 300%;
+  font-size: var(--site-title-size);
   font-weight: bold;
+}
+
+.tiny-text {
+  font-size: var(--tiny-text-size);
 }
 
 .header-nav {
@@ -35,14 +141,20 @@ body {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  font-size: 25px;
+}
+
+a,
+.header-nav a {
+  color: var(--link-color);
 }
 
 .header-nav a {
-  color: rgb(166, 0, 255);
   text-decoration: none;
 }
 
-.header-nav a:hover {
+.header-nav a:hover,
+.reversefootnote:hover {
   text-decoration: underline;
 }
 
@@ -51,203 +163,161 @@ a.selected-tab {
   text-decoration: underline;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #666;
-  margin: 12px 0 16px 0;
-}
-
-main {
-  width: 100%;
-}
-
-.profile-photo {
-  float: right;
-  width: 450px;
-  max-width: 50%;
-  min-width: 240px;
-  margin: 0 0 18px 28px;
-  border: none;
-}
+/* ==========================================================================
+   Core typography
+   ========================================================================== */
 
 p {
-  margin: 0 0 18px 0;
+  margin: 0 0 var(--paragraph-gap) 0;
 }
 
-h2 {
-  font-size: 200%;
-  margin: 28px 0 12px 0;
-  font-weight: bold;
+main p {
+  font-size: inherit;
+  line-height: inherit;
+  text-align: var(--paragraph-align);
 }
 
-ul {
+ul,
+ol {
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: var(--list-gap);
+}
+
+main ul,
+main ol,
+main li {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 li {
   margin-bottom: 8px;
 }
 
-a {
-  color: rgb(166, 0, 255);
+h2 {
+  font-size: var(--h2-size);
+  margin: var(--h2-margin);
+  font-weight: bold;
+  line-height: 1.15;
 }
 
-@media (max-width: 900px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+h3 {
+  font-size: var(--h3-size);
+  margin: var(--h3-margin);
+  font-weight: bold;
+  line-height: 1.2;
+}
 
-  .site-title {
-    font-size: 220%;
-  }
+hr {
+  border: none;
+  border-top: 1px solid var(--rule-color);
+  margin: 12px 0 16px 0;
+}
 
-  .profile-photo {
-    float: none;
-    display: block;
-    width: 90%;
-    max-width: 450px;
-    margin: 0 auto 18px auto;
-  }
+.reading-divider {
+  margin-top: 48px;
+  margin-bottom: 25px;
+}
 
-  body {
-    font-size: 17px;
-  }
+/* Small utility classes */
+.text-center {
+  text-align: center;
+}
 
-  h2 {
-    font-size: 220%;
-  }
+.text-right {
+  text-align: right;
+}
+
+.translation {
+  color: var(--muted-text);
+  font-size: 0.85em;
+}
+
+/* ==========================================================================
+   Page-specific content refinements
+   ========================================================================== */
+
+.writing-content li {
+  margin-bottom: 12px;
 }
 
 .reading-list {
-  font-size: 18px;
+  font-size: var(--reading-list-size);
   margin-top: 0;
   padding-left: 22px;
 }
 
 .reading-list li {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.reading-divider {
-  border: none;
-  border-top: 1px solid #666;
-  margin-top: 150px;    /* Greatly increases space after the last body sentence */
-  margin-bottom: 25px;  /* Space between the line and the first footnote */
-}
-
-.translation {
-  color: #666;
-  font-size: 0.85em;
+  font-size: inherit;
+  margin-bottom: var(--reading-list-gap);
 }
 
 blockquote {
-  /* 0 top/bottom margin, 12% left/right margin for that dramatic indent */
-  margin: 30px 7%; 
+  margin: var(--blockquote-margin);
   padding: 0;
-  /* font-style: italic; */
-  color: #222222; /* Slightly softer than pure black for a literary feel */
-  line-height: 1.45;
-  text-align: justify; /* Optional: cleans up the edges of the block */
-}
-
-/* On smaller screens, massive indents will squish the text too much */
-@media (max-width: 900px) {
-  blockquote {
-    margin: 28px 6%; /* Reduces the indent on mobile so it stays readable */
-    font-size: 18px;
-  }
-}
-
-/* Enhances readability for deep reading */
-main p {
+  color: var(--soft-text);
+  line-height: var(--blockquote-line-height);
   text-align: justify;
-}
-
-/* 文字居中 */
-.text-center {
-  text-align: center;
-}
-
-/* 文字右对齐 */
-.text-right {
-  text-align: right;
-}
-
-h3 {
-  font-size: 150%; /* Slightly smaller than your 200% H2 title */
-  margin: 100px 0 50px 0; /* Generous top margin to separate sections, smaller bottom margin */
-  font-weight: bold;
-}
-
-/* Responsive adjustment for mobile screens */
-@media (max-width: 900px) {
-  h3 {
-    font-size: 175%; /* Scales slightly up for mobile readability, matching your layout choices */
-    margin: 27px 0 15px 0;
-  }
 }
 
 .epigraph {
   max-width: 2000px;
-  margin: 0 0 60px auto; /* Aligns the epigraph block to the right */
-  /* padding-left: 20px;
-  /* border-left: 2px solid #666; /* Subtle left border to anchor it */
+  margin: 0 0 60px auto;
+}
+
+.epigraph-text,
+.epigraph-source {
+  font-family: var(--font-serif);
+  font-size: 1.05em;
+  line-height: 1.4;
 }
 
 .epigraph-text {
-  font-size: 30px; /* Slightly smaller than your 20px body text */
-  font-family: Georgia, serif; /* Matches your essay content font for a cohesive look */
-  margin-bottom: 6px !important;
-  line-height: 1.4;
-  /* font-style: italic; */
+  margin-bottom: 6px;
 }
 
 .epigraph-source {
-  font-size: 30px;
-  font-family: Georgia, serif; /* Matches your essay content font for a cohesive look */
-  /* color: #666; /* Matches your translation class color */
   text-align: right;
-  margin: 0 !important;
-}
-
-/* Responsive adjustment for mobile screens */
-@media (max-width: 900px) {
-  .epigraph {
-    max-width: 100%;
-    margin: 0 0 28px 0; /* Left-aligns it on mobile for better readability */
-  }
-}
-
-.essay-content {
-  font-family: Georgia, serif;
-  font-size: 30px;
-  line-height: 1.5; /* Bumping this slightly from 1.35 makes Georgia look incredibly elegant */
+  margin: 0;
 }
 
 .quote-translation {
-  display: block;      /* Forces it onto a new line below the Chinese text */
-  margin-top: 14px;    /* Creates a small gap between the original and translation */
-  /* font-size: 0.85em;   /* Makes it slightly smaller and elegant */
-  color: #555555;         /* Elegant muted gray */
-  font-family: Georgia, serif; /* Optional: switches back to sans-serif for contrast */
+  display: block;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #555;
+  font-family: var(--font-serif);
 }
 
-/* Style for the footnote number in the text */
+.essay-content blockquote {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.essay-content .epigraph p {
+  margin-bottom: 24px;
+}
+
+/* Footnotes */
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
 sup a {
   text-decoration: none;
-  font-size: 0.8em;
-  padding: 0 2px;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 0 1px;
 }
 
-/* Style for the footnotes container at the bottom */
 .footnotes {
-  font-size: 25px; /* Slightly smaller than your 20px body text */
+  font-family: var(--font-sans);
+  font-size: var(--footnote-size);
   line-height: 1.35;
-  color: #222222; /* The soft, lighter gray you chose earlier */
-  font-family: Arial, Helvetica, sans-serif; /* Clean sans-serif for notes */
+  color: var(--soft-text);
 }
 
 .footnotes ol {
@@ -259,62 +329,26 @@ sup a {
   margin-bottom: 10px;
 }
 
-/* Style for the return arrow */
 .reversefootnote {
   text-decoration: none;
   margin-left: 4px;
-  color: rgb(166, 0, 255);
-}
-.reversefootnote:hover {
-  text-decoration: underline;
+  color: var(--link-color);
 }
 
-/* Fixes the uneven line height caused by superscripts */
-sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-  top: -0.5em; /* Manually shifts the number up without expanding the line */
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+.profile-photo {
+  float: right;
+  width: 470px;
+  height: auto;
+  max-width: 50%;
+  min-width: 240px;
+  margin: 0 0 18px 28px;
+  border: none;
 }
 
-/* Optional styling to make the footnote links slightly more elegant */
-sup a {
-  text-decoration: none;
-  font-size: 0.75em;
-  font-weight: bold;
-  padding: 0 1px;
-}
-
-/* Creates custom vertical spacing between essay paragraphs */
-.essay-content p {
-  margin-top: 0;
-  margin-bottom: 27px; /* Increases the gap between paragraphs from 18px to 24px */
-}
-
-/* Ensures special elements like translations or epigraph sources don't break due to this rule */
-.essay-content .epigraph p,
-.essay-content .quote-translation {
-  margin-bottom: inherit; 
-}
-
-.essay-content blockquote {
-  margin-top: 0;
-  margin-bottom: 24px; /* Matches your body paragraph spacing */
-}
-
-.essay-content .quote-translation {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 24px; /* Matches your body paragraph spacing */
-}
-
-.essay-content .epigraph p {
-  margin-top: 0;
-  margin-bottom: 24px; /* Matches your body paragraph spacing */
-}
-
-
-/* Styling for essay images */
 .essay-figure {
   margin: 50px auto;
   max-width: 100%;
@@ -326,25 +360,25 @@ sup a {
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 2px; /* Slightly softens the sharp edges */
+  border-radius: 2px;
 }
 
-.essay-figure figcaption {
-  margin-top: 12px;
-  font-size: 1.5rem;
-  color: #666; /* Elegant gray for captions */
+.essay-figure figcaption,
+.image-grid figcaption {
+  margin-top: 8px;
+  font-size: var(--caption-size);
+  color: var(--muted-text);
   font-style: italic;
+  line-height: 1.35;
 }
 
-/* Base wrapper for a group of images */
 .image-grid {
   display: grid;
-  gap: 16px; /* Spacing between the photos */
+  gap: 16px;
   margin: 50px auto;
   max-width: 100%;
 }
 
-/* Ensure images inside look nice and behave properly */
 .image-grid figure {
   margin: 0;
   text-align: center;
@@ -354,28 +388,76 @@ sup a {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; /* Keeps images beautifully cropped if aspect ratios differ */
+  object-fit: cover;
   border-radius: 2px;
 }
 
-.image-grid figcaption {
-  margin-top: 8px;
-  font-size: 1.5rem;
-  color: #666;
-  font-style: italic;
-}
-
-/* Desktop Layout Adjustments (Screens wider than 600px) */
 @media (min-width: 600px) {
   .image-grid.cols-2 {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns at 50% each */
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .image-grid.cols-3 {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns at ~33% each */
+    grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .image-grid.cols-4 {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns at 25% each */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Mobile scaling
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  :root {
+    --site-title-size: 220%;
+  }
+
+  body.page-index {
+    --content-size: 17px;
+  }
+
+  body.page-essay {
+    --content-size: 18px;
+    --content-line-height: 1.5;
+    --h3-size: 1.75em;
+    --h3-margin: 27px 0 15px 0;
+  }
+
+  body.page-writing {
+    --content-size: 16px;
+  }
+
+  body.page-reading {
+    --content-size: 16px;
+    --reading-list-size: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    float: none;
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto 18px auto;
+  }
+
+  blockquote {
+    margin: 28px 6%;
+  }
+
+  .epigraph {
+    max-width: 100%;
+    margin: 0 0 28px 0;
+  }
+
+  .essay-figure img {
+    max-width: 100%;
   }
 }
