@@ -34,7 +34,7 @@
   --h2-size: 2em;
   --h2-margin: 28px 0 12px 0;
   --h3-size: 1.5em;
-  --h3-margin: 60px 0 30px 0;
+  --h3-margin: 100px 0 50px 0;
 
   --reading-list-size: 17px;
   --reading-list-gap: 8px;
@@ -287,6 +287,7 @@ blockquote {
   margin-bottom: 24px;
   color: #555;
   font-family: var(--font-serif);
+  font-size: 0.9em;
 }
 
 .essay-content blockquote {
@@ -297,6 +298,23 @@ blockquote {
 .essay-content .epigraph p {
   margin-bottom: 24px;
 }
+
+.scene-break {
+  text-align: center;
+  margin: 1.5em 0;
+  font-size: 1.5em;
+  color: #555555;
+}
+
+.dinkus {
+  text-align: center;
+  margin: 1.5em 0;
+  font-size: 1.2em;
+  letter-spacing: 0.5em;
+  color: #333333;
+}
+
+
 
 /* Footnotes */
 sup {
