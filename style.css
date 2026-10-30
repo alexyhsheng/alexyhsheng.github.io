@@ -60,12 +60,15 @@ body.page-essay {
   --content-font: var(--font-serif);
   --content-size: 25px;
   --content-line-height: 1.5;
-  --paragraph-gap: 27px;
+  --paragraph-gap: 28px;
   --paragraph-align: justify;
   --h3-size: 28px;
   --h3-margin: 60px 0 30px 0;
   --caption-size: 0.85em;
   --footnote-size: 0.85em;
+  /* ADD THESE TWO LINES TO ADJUST WRITING/ESSAY COLUMN WIDTH */
+  --page-max-width: 2000px;  /* Narrows the maximum text column width */
+  --page-padding: 20px 10% 20px 10%; /* Increases left/right side margins */
 }
 
 body.page-writing {
@@ -313,6 +316,22 @@ blockquote {
   letter-spacing: 0.5em;
   color: #333333;
 }
+
+
+.reading-list .language-group {
+  list-style: none;
+}
+
+.reading-list .language-group > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reading-list .language-group + .language-group {
+  margin-top: 24px;
+}
+
 
 
 
