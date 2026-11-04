@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Lycian Fire - Alex Sheng</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="page-essay">
-    <div class="page">
-      <header class="header">
-        <div class="header-left">
-          <span class="site-title">Alex Sheng</span>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Lycian Fire - Alex Sheng</title>
+  <link rel="stylesheet" href="essay.css">
+  <!-- Uniform photos: one image per row, identical 16:9 display frames. -->
+  <style>
+    .essay .image-grid.cols-2,
+    .essay .image-grid.cols-3 {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5em;
+    }
 
-        <nav class="header-nav">
-          <a href="writings.html">back</a>
-        </nav>
-      </header>
+    /* Apply the same dimensions to ALL images, single and grouped. */
+    .essay .essay-figure img,
+    .essay .image-grid.cols-2 img,
+    .essay .image-grid.cols-3 img {
+      display: block;
+      width: 90%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A Lycian Fire</h1>
+  </header>
 
-      <hr />
+  <hr>
 
-      <main class="essay-content">
-        <h2>A Lycian Fire</h2><br/>
-        <p class="translation" style="margin-bottom: 27px;">July 2026</p>
-        <br/><br/>
-        <div class="epigraph">
+  <main class="essay">
+<div class="epigraph">
         <p class="epigraph-text">For now we see through a glass, darkly; but then face to face.</p>
-        <p class="epigraph-source">— 1 Corinthians 13:12</p><br/>
+        <p class="epigraph-source">— 1 Corinthians 13:12</p>
         </div>
 
-        
-        <h3>Chapter 1: The Eternal Fire</h3><br/>
+        <div class="epigraph-divider">&mdash;</div>        
+
+        <h2>Chapter 1: The Eternal Fire</h2>
 
         <p>
         I saw a flame on a Lycian slope.
@@ -41,7 +53,7 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="fire_pics/fire.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="The eternal fire of Chimaera burning on white rock">
+        <img src="fire_pics/fire.jpeg" alt="The eternal fire of Chimaera burning on white rock">
         <figcaption>The eternal fire on the slopes of Chimaera at noon.</figcaption>
         </figure>
 
@@ -74,8 +86,7 @@
         </p>
 
         <div class="image-grid cols-2">
-        <figure><img src="fire_pics/chimaera2.jpeg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;"><figcaption>The church remains at Chimaera</figcaption></figure>
-        <figure><img src="fire_pics/chimaera1.jpeg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;"><figcaption>The barely legible frescoes</figcaption></figure>
+        <figure><img src="fire_pics/chimaera1.jpeg" alt="The barely legible frescoes"><figcaption>The barely legible frescoes</figcaption></figure>
         </div>
 
         <p>
@@ -204,9 +215,9 @@
         
         <p>
         When I finally reached the summit, the field of vision opened narrowly. Beyond the dry branches and stones, mountains unfolded in layers, and the Mediterranean Sea lay at their end. Because the mountains blocked it, the sea did not appear vast. What shook me was the nearly indivisible line between sky and water, and the fragile, milky blue that seemed ready to evaporate at any moment. The sea did not glitter even a bit. It remained there at a distance, a vast, inert presence, like an answer that no longer wishes to speak.
-        </p><br/>
+        </p>
 
-        <h3>Chapter 2: Blue</h3><br/>
+        <h2>Chapter 2: Blue</h2>
 
         <p>
         Before seeing Antalya, I saw Anatolia from the air.
@@ -265,7 +276,7 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="fire_pics/hotel.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="Outside the hotel window">
+        <img src="fire_pics/hotel.jpeg" alt="Outside the hotel window">
         <figcaption>Outside the hotel window</figcaption>
         </figure>
 
@@ -325,6 +336,11 @@
         The blue kept unfolding outward. Cruel, cruel blue.
         </p>
 
+        <figure class="essay-figure">
+        <img src="fire_pics/me.jpg" alt="At Marina">
+        <figcaption>At Marina</figcaption>
+        </figure>
+
         <p>
         That day we took a boat out from the port of Marina. As we cleared the harbor, the shore slowly receded: white houses, palms, yachts, restaurant signs, and buildings along the cliffs were pushed back into distance. 
         </p>
@@ -338,7 +354,7 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="fire_pics/sea.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="sea">
+        <img src="fire_pics/sea.jpeg" alt="sea">
         <figcaption>The sea surface shoot from the boat.</figcaption>
         </figure>
 
@@ -362,9 +378,8 @@
         Toward dusk, the boat turned back toward the shore. The overexposed, brutal blue above us began to subside like a fever, giving way to a tired, grizzled twilight. Passengers leaned loosely against the railings. The warm yellow light strips beneath the roof of the cabin had already come on. In the distance, the Beydağları mountains—part of the Taurus range—turned slate in the night. During the day they were often blurred, as if strong light had erased their edges; at night, strangely, they regained their shape.
         </p>
 
-        <div class="image-grid cols-2">
-        <figure><img src="fire_pics/me.jpg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;"><figcaption>At Marina</figcaption></figure>
-        <figure><img src="fire_pics/marina.jpeg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;"><figcaption>Marina at dusk</figcaption></figure>
+        <div class="essay-figure">
+        <figure><img src="fire_pics/marina.jpeg" alt="Marina at dusk"><figcaption>Marina at dusk</figcaption></figure>
         </div>
 
         <p>
@@ -389,9 +404,9 @@
 
         <p>
         A cat slipped along the edge of the terrace. As it crossed the blue light, its tail brightened for an instant, then disappeared at once among the tables, chairs, and plants.
-        </p><br/>
+        </p>
 
-        <h3>Chapter 3: Cats</h3><br/>
+        <h2>Chapter 3: Cats</h2>
 
         <p>
         In Antalya, cats are everywhere.
@@ -450,9 +465,7 @@
         </p>
 
         <div class="image-grid cols-3">
-        <figure><img src="fire_pics/fish1.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Sea bass and turbot</figcaption></figure>
-        <figure><img src="fire_pics/fish2.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Hamsili and salmon</figcaption></figure>
-        <figure><img src="fire_pics/fish3.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Sea bream</figcaption></figure>
+        <figure><img src="fire_pics/fish3.jpeg" alt="Sea bream"><figcaption>Sea bream</figcaption></figure>
         </div>
 
         <p>
@@ -472,7 +485,7 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="fire_pics/coffee.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="coffee">
+        <img src="fire_pics/coffee.jpeg" alt="coffee">
         <figcaption>Turkish coffee</figcaption>
         </figure>
 
@@ -506,9 +519,9 @@
 
         <p>
         It walks onto a sun-bleached stone, stops, and licks its paw.
-        </p><br/>
+        </p>
 
-        <h3>Chapter 4: Stones</h3><br/>
+        <h2>Chapter 4: Stones</h2>
 
         <p>
         Civilization remains, in the end, in the form of stones.
@@ -563,9 +576,8 @@
         </p>
 
         <div class="image-grid cols-3">
-        <figure><img src="fire_pics/perge1.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Ancient theatre at Perge</figcaption></figure>
-        <figure><img src="fire_pics/perge2.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Columns at Perge</figcaption></figure>
-        <figure><img src="fire_pics/olympos.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Olympos, where nature began to take over.</figcaption></figure>
+        <figure><img src="fire_pics/perge1.jpeg" alt="Ancient theatre at Perge"><figcaption>Ancient theatre at Perge</figcaption></figure>
+        <figure><img src="fire_pics/perge2.jpeg" alt="Columns at Perge"><figcaption>Columns at Perge</figcaption></figure>
         </div>
         
         <p>
@@ -595,6 +607,10 @@
         <p>
         The stones of Olympos are not exposed like those of Perge. A wall emerges briefly from a thicket, then disappears behind vines. Residential quarters are divided by high walls into small compartments. Many of the walls have little holes in them, and some have more regular rectangular recesses, like niches. Someone once must have placed objects there—lamps, vessels, small idols, or merely the ordinary debris of daily life.
         </p>
+
+        <div class="image-grid cols-3">
+        <figure><img src="fire_pics/olympos.jpeg" alt="Olympos, where nature began to take over."><figcaption>Olympos, where nature began to take over.</figcaption></figure>
+        </div>
 
         <p>
         Tree roots enter cracks in the wall. Pine needles fall on the stone pavement. Water continues to move along ancient stone channels. Bird calls, insects, wet soil—these have begun arranging the spaces once belonged to humans.
@@ -644,11 +660,8 @@
         Ruins usually compel imagination through absence. Aspendos seemed to have preserved a past sound for too long. The sound itself might have vanished, but the enormous organ prepared to receive it remained.
         </p>
 
-        <div class="image-grid cols-4">
-        <figure><img src="fire_pics/aspendos1.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Theatre of Aspendos</figcaption></figure>
-        <figure><img src="fire_pics/aspendos2.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Hallway at the theatre</figcaption></figure>
-        <figure><img src="fire_pics/aspendos3.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Acropolis ruins at Aspendos</figcaption></figure>
-        <figure><img src="fire_pics/aspendos4.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Basilica ruins at Aspendos</figcaption></figure>
+        <div class="image-grid cols-3">
+        <figure><img src="fire_pics/aspendos1.jpeg" alt="Theatre of Aspendos"><figcaption>Theatre of Aspendos</figcaption></figure>
         </div>
 
         <p>
@@ -697,9 +710,9 @@
 
         <p>
         <i>Death.</i>
-        </p><br/>
+        </p>
 
-        <h3>Chapter 5: City of the Dead</h3><br/>
+        <h2>Chapter 5: City of the Dead</h2>
 
         <p>
         Insects always remind me of death.
@@ -754,9 +767,8 @@
         </p>
 
         <div class="image-grid cols-3">
-        <figure><img src="fire_pics/sarcaphogi1.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Sarcophagi at the Side Musuem</figcaption></figure>
-        <figure><img src="fire_pics/sarcaphogi2.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Sarcophagi at the Alanya Archaeological Museum</figcaption></figure>
-        <figure><img src="fire_pics/kakasbos.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Kakasbos, the ancient Anatolian deity. Stele at the Antalya Necropolis Museum</figcaption></figure>
+        <figure><img src="fire_pics/sarcaphogi1.jpeg" alt="Sarcophagi at the Side Musuem"><figcaption>Sarcophagi at the Side Musuem</figcaption></figure>
+        <figure><img src="fire_pics/sarcaphogi2.jpeg" alt="Sarcophagi at the Alanya Archaeological Museum"><figcaption>Sarcophagi at the Alanya Archaeological Museum</figcaption></figure>
         </div>
 
         <p>
@@ -817,9 +829,9 @@
 
         <p>
         Through the white steel structure and the distant glass walls, one could see modern Antalya, with its yellow taxis and cafés here and there. The living always continue like this: waiting for a car, buying water, making a phone call, smoking, crossing the street. The air was full of heat, dust, and gasoline.
-        </p><br/>
+        </p>
 
-        <h3>Chapter 6: Glass</h3><br/>
+        <h2>Chapter 6: Glass</h2>
 
         <p>
         W and I joked that Turkish architecture seemed a little confused, as if it could not decide to which style it wanted to belong.
@@ -858,7 +870,7 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="fire_pics/glass.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="The shattered glass">
+        <img src="fire_pics/glass.jpeg" alt="The shattered glass">
         <figcaption>The shattered glass</figcaption>
         </figure>
 
@@ -872,9 +884,9 @@
 
         <p>
         It made me, strangely, feel relieved.
-        </p><br/>
+        </p>
 
-        <h3>Chapter 7: Burning</h3><br/>
+        <h2>Chapter 7: Burning</h2>
 
         <p>
         The bodies of Turkish people are hard to unsee. Not because they are especially beautiful or ugly, but because they do not seem to evade their own heaviness. The staff outside the airport, the men in restaurants, the people waiting by the road, the women dressed in black walking swiftly through the night—they all carried a certain unpolished physicality. The men’s beards were especially visible: thick, dark, reminding me of maturity, animality, and fatigue.
@@ -907,6 +919,11 @@
         <p>
         We had <i>Kelle Paça</i>—that is, sheep-head soup—at a local restaurant.
         </p>
+
+        <figure class="essay-figure">
+        <img src="fire_pics/paca.jpeg" alt="Paça soup">
+        <figcaption>Paça soup</figcaption>
+        </figure>
         
         <p>
         The place was small and not very clean. There were many flies—one of the characteristics of small restaurants in Antalya. They circled around the table and the bowls in tight, neurotic orbits. I was always amazed by the locals’ ability to ignore these annoying bugs.
@@ -1022,10 +1039,13 @@
 
         <p>
         And I see it.
-        </p><br/><br/>
+        </p>
 
-        <p><i>The End</i></p><br/>
+        <p><i>The End</i></p>
 
+        <div class="epigraph-divider">&mdash;</div>        
+
+        <p>July 2026, written on the returning flight from Turkey</p>
 
         <hr class="reading-divider" />
 
@@ -1041,17 +1061,14 @@
                     <a href="#fnref:2" class="reversefootnote">↩</a>
                 </li>
                 <li id="fn:3">
-                    The line is from the ancient Greek playwright Sophocles. It translates to "Not to be born is, beyond all estimation, best"
+                    The line is from Sophocles. It translates to "Not to be born is, beyond all estimation, best"
                     <a href="#fnref:3" class="reversefootnote">↩</a>
                 </li>
             </ol>
         </footer>
+  </main>
 
-      </main>
-
-      <hr />
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+  <hr>
+  <p><a href="writings.html">Back to writings</a></p>
+</body>
 </html>
