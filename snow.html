@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>And the Snow Falls - Alex Sheng</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="page-essay">
-    <div class="page">
-      <header class="header">
-        <div class="header-left">
-          <span class="site-title">Alex Sheng</span>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>And the Snow Falls - Alex Sheng</title>
+  <link rel="stylesheet" href="essay.css">
+  <!-- Same photograph layout as the finalized A Lycian Fire. -->
+  <style>
+    .essay .image-grid.cols-2,
+    .essay .image-grid.cols-3 {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5em;
+    }
 
-        <nav class="header-nav">
-          <a href="writings.html">back</a>
-        </nav>
-      </header>
+    /* Apply the same dimensions to ALL images, single and grouped. */
+    .essay .essay-figure img,
+    .essay .image-grid.cols-2 img,
+    .essay .image-grid.cols-3 img {
+      display: block;
+      width: 90%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  
 
-      <hr />
+    /* The trip map is portrait-oriented; show it completely without cropping. */
+    .essay .route-map img {
+      width: min(70%, 460px);
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+    }
 
-      <main class="essay-content">
-        <h2>And the Snow Falls</h2><br/>
-        <p class="translation" style="margin-bottom: 27px;">July 2026; translated and revised from the <a href="https://mp.weixin.qq.com/s/KJo3p51YZrSRkcpyLNwfKA">original Chinese</a> version from December 2025</p>
-        <br/><br/>
-        <div class="epigraph">
+    /* Keep Hebbel's German and English columns readable on narrow screens. */
+    .essay .parallel-poem {
+      table-layout: fixed;
+      font-size: 0.88em;
+    }
+    .essay .parallel-poem td {
+      overflow-wrap: anywhere;
+      padding-right: 0.35em;
+    }
+    @media (max-width: 600px) {
+      .essay .parallel-poem { font-size: 0.78em; }
+      .essay .route-map img { width: min(90%, 460px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>And the Snow Falls</h1>
+  </header>
+
+  <hr>
+
+  <main class="essay"><div class="epigraph">
         <p class="epigraph-text">The past is never dead. It’s not even past.</p>
         <p class="epigraph-source">— William Faulkner, <i>Requiem for a Nun</i></p>
-        </div><br/>
+        </div>
 
-        <h3>Memory</h3><br/>
+        <div class="epigraph-divider">&mdash;</div>
+
+        <h2>Memory</h2>
 
         <p>
         On the second day after the journey ended, I sat down at my desk. Outside, the snow had been falling all night, dense and uninterrupted. It descended with an excessive quietness, swallowing the road and the roofs, erasing the distance. It was because of the snow, perhaps, that the crossing of those eight states felt so suddenly distant, as if the miles had been traveled years ago, on a continent I no longer inhabited.
@@ -91,14 +126,14 @@
         Antiquest felt at Noon<br>
         When August burning low<br>
         Arise this spectral Canticle<br>
-        Repose to typify<br></span>
+        Repose to typify<br>
         </blockquote>
         
         <blockquote>
         Remit as yet no Grace<br>
         No furrow on the Glow,<br>
         But a Druidic Difference<br>
-        Enhances Nature now<br></span>
+        Enhances Nature now<br>
         </blockquote>
 
         <p>
@@ -125,9 +160,7 @@
         The hotel lights were dim, the curtains in the room were drawn tightly, and the air carried a lingering smell of old wood. As I lay on the bed, the events of the day began to blur, and I drifted into a deep sleep.
         </p>
 
-        <br/>
-
-        <h3>The Great Smoky Mountains</h3><br/>
+        <h2>The Great Smoky Mountains</h2>
 
         <p>
         I woke a little after six. For breakfast I ate a few bites of eggs and sausage, and a dry, over-toasted muffin. It was neither good nor bad, but it kept my stomach from being empty. After that, we drove toward Great Smoky Mountains National Park, which was about an hour and a half away.
@@ -164,7 +197,7 @@
         </p>
 
         <blockquote>
-            <table style="width: 100%; border-collapse: collapse; border: none; font-style: normal;">
+            <table class="parallel-poem" style="width: 100%; border-collapse: collapse; border: none; font-style: normal;">
                 <!-- Stanza 1 -->
                 <tr>
                     <td style="width: 50%; padding-bottom: 4px; vertical-align: top;">Die Blumen, so hoch sie wachsen,</td>
@@ -223,9 +256,7 @@
         The sky slowly dissolved into dusk. On either side of the highway, the dark wall of the forest formed a heavy, unblinking presence that seemed to move with us through the dark. Under an immense and starless sky, we drove the remaining miles to Columbia.
         </p>
 
-        <br/>
-
-        <h3>The Swamp at Congaree</h3><br/>
+        <h2>The Swamp at Congaree</h2>
 
         <p>
         The hotel corridor at Columbia still held a muffled smell when we woke, like a dream that had not quite dispersed overnight. Outside, the moist morning air felt like a piece of cloth freshly lifted from water.
@@ -277,9 +308,7 @@
         We spent the night there.
         </p>
 
-        <br/>
-
-        <h3>The New River Gorge</h3><br/>
+        <h2>The New River Gorge</h2>
 
         <p>
         We woke late the morning we left Blacksburg; outside, the light was already high and bright. After a quick breakfast at the hotel, we set out again, heading northwest toward New River Gorge.
@@ -316,8 +345,8 @@
         </p>
 
         <div class="image-grid cols-2">
-        <figure><img src="snow_pics/bridge.jpeg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;"><figcaption>New River Gorge Bridge from closeup</figcaption></figure>
-        <figure><img src="snow_pics/river.jpeg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;"><figcaption>The New River from high above</figcaption></figure>
+        <figure><img src="snow_pics/bridge.jpeg" alt="New River Gorge Bridge from closeup"><figcaption>New River Gorge Bridge from closeup</figcaption></figure>
+        <figure><img src="snow_pics/river.jpeg" alt="The New River from high above"><figcaption>The New River from high above</figcaption></figure>
         </div>
 
         <p>
@@ -363,8 +392,8 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="snow_pics/woods.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="woods">
-        <figcaption>Guess: is this Shubert or Schumann?</figcaption>
+        <img src="snow_pics/woods.jpeg" alt="Guess: is this the Shubert or Schumann?">
+        <figcaption>Guess: is this the Shubert or Schumann?</figcaption>
         </figure>
 
         <p>
@@ -384,7 +413,7 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="snow_pics/kaymoor.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="kaymoor">
+        <img src="snow_pics/kaymoor.jpeg" alt="A safety board at the Kaymoor mining site">
         <figcaption>A safety board at the Kaymoor mining site</figcaption>
         </figure>
 
@@ -393,7 +422,7 @@
         </p>
 
         <blockquote>
-        In 1919 it, too, slipped over the cliff edge, together with the bones of those buried in the churchyard... The town was soon in a position to build every conceivable kind of defense against attack from the landward side and against the force of the sea, which was ceaselessly eroding the coast. All we know for certain is that they ultimately proved inadequate... Over the centuries that followed, catastrophic incursions of the sea into the land of this kind happened time and again, and, even during long years of apparent calm, coastal erosion continued to take its natural course. Little by little the people of Dunwich accepted the inevitability of the process.
+        In 1919 it, too, slipped over the cliff edge, together with the bones of those buried in the churchyard... The town was soon in a position to build every conceivable kind of defense against attack from the landward side and against the force of the sea, which was ceaselessly eroding the coast. All we know for certain is that they ultimately proved inadequate... Over the centuries that followed, catastrophic incursions of the sea into the land of this kind happened time and again, and, even during long years of apparent calm, coastal erosion continued to take its natural course. Little by little the people of Dunwich accepted the inevitability of the process.<sup id="fnref:4"><a href="#fn:4">4</a></sup>
         </blockquote>
 
         <p>
@@ -409,13 +438,11 @@
         </p>
 
         <figure class="essay-figure">
-        <img src="snow_pics/mediterranean.jpeg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" alt="dinner">
+        <img src="snow_pics/mediterranean.jpeg" alt="Dinner">
         <figcaption>Dinner</figcaption>
         </figure>
 
-        <br/>
-
-        <h3>Northbound</h3><br/>
+        <h2>Northbound</h2>
 
         <p>
         P, an Ohio native, remarked that Hocking Hills was the best scenery Ohio had to offer, which meant it was likely just slightly better than the worst scenery in West Virginia. Though highly popular within the state, it remained largely unknown outside of it. Since the drive from Athens to Ann Arbor would take more than four hours, we decided to stop there halfway and take a short walk.
@@ -430,9 +457,8 @@
         </p>
 
         <div class="image-grid cols-3">
-        <figure><img src="snow_pics/hocking1.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>Trees at Hocking Hills</figcaption></figure>
-        <figure><img src="snow_pics/hocking2.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>A wall of rock rose in stacked ledges</figcaption></figure>
-        <figure><img src="snow_pics/pond.jpeg" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"><figcaption>A pond covered with thin ice</figcaption></figure>
+        <figure><img src="snow_pics/hocking2.jpeg" alt="A wall of rock rose in stacked ledges"><figcaption>A wall of rock rose in stacked ledges</figcaption></figure>
+        <figure><img src="snow_pics/pond.jpeg" alt="A pond covered with thin ice"><figcaption>A pond covered with thin ice</figcaption></figure>
         </div>
 
         <p>
@@ -453,17 +479,17 @@
 
         <p>
         The snow was still falling.
-        </p><br/><br/>
+        </p>
 
-        <p><i>The End</i></p><br/><br/>
+        <p><i>The End</i></p>
 
-        <figure class="essay-figure">
-        <img src="snow_pics/trip.png" style="width: 25%; aspect-ratio: 3/4; object-fit: cover;" alt="trip">
+        <div class="epigraph-divider">&mdash;</div>
+
+        <p>July 2026; translated and revised from the <a href="https://mp.weixin.qq.com/s/KJo3p51YZrSRkcpyLNwfKA">original Chinese</a> version from December 2025</p>
+        <figure class="essay-figure route-map">
+        <img src="snow_pics/trip.png" alt="The trip crossing eight states: Michigan, Ohio, Kentucky, Tennessee, South Carolina, North Carolina, Virginia, West Virginia">
         <figcaption>The trip crossing eight states: Michigan, Ohio, Kentucky, Tennessee, South Carolina, North Carolina, Virginia, West Virginia</figcaption>
         </figure>
-
-        <!--<div class="scene-break">&#10087;</div>-->
-        <!--<div class="scene-break">&#9778;</div>-->
 
 
         <hr class="reading-divider" />
@@ -489,12 +515,9 @@
                 </li>
             </ol>
         </footer>
+  </main>
 
-      </main>
-
-      <hr />
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+  <hr>
+  <p><a href="writings.html">Back to writings</a></p>
+</body>
 </html>
