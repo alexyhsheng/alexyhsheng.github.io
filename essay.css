@@ -1,7 +1,7 @@
 /* Essay pages: minimal academic-site frame, with book-like text formatting. */
 body {
   background-color: #f9f9f9;
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 24px;
   line-height: 1.4;
 }
@@ -16,9 +16,9 @@ hr {
 
 /* The column stays left-aligned, rather than centered. */
 .essay {
-  max-width: 1000px;
+  max-width: 900px;
   font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Songti SC", Georgia, serif;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.6;
   margin: 0 auto;
   text-align: left;
