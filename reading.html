@@ -8,18 +8,25 @@
   <style>
     body {
       background-color: #f9f9f9;
-      font-size: 24px;
+      font-size: 20px;
       margin-left: 24px;
       line-height: 1.4;
     }
 
     ul {
-      font-size: 20px;
+      font-size: 18px;
     }
 
+    h1{
+      font-size: 1.5em;
+    }
+
+    h2{
+      font-size: 1.25em;
+    }
 
     hr {
-     max-width: 1600px;
+     max-width: 1250px;
       margin-left: 0;
     }
 
@@ -27,13 +34,13 @@
 
     /* Keep the picture close to the left-aligned biography, not at the edge of the screen. */
     .introduction {
-      max-width: 1600px;
+      max-width: 1250px;
       display: flow-root;
     }
  
     .portrait {
       float: right;
-      width: 500px;
+      width: 300px;
       max-width: 35%;
       height: auto;
       margin: 0 0 1em 1.5em;
@@ -47,6 +54,30 @@
         margin: 0 0 1em 0;
       }
     }
+
+    .year-block {
+      max-width: 1250px;
+      display: flow-root;
+    }
+
+    .year-image {
+      float: right;
+      width: 350px;
+      max-width: 35%;
+      height: auto;
+      margin: 0.25em 0 1em 1.5em;
+    }
+
+    @media (max-width: 600px) {
+      .year-image {
+        float: none;
+        display: block;
+        max-width: 100%;
+        margin: 0 0 1em 0;
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -58,9 +89,13 @@
 
   <main>
     <div class="introduction">
-      <img class="portrait" src="assets/courbet.jpg" alt="Artwork accompanying the reading list" width="500">
+
+      <div class="year-block">
+      <img class="year-image" src="assets/courbet.jpg" alt="Artwork for 2025 reading list">
 
       <p>I keep a list of books I have read and found interesting. I'm always happy to chat about any of these titles, share recommendations, or find something to read together.</p>
+
+
 
       <h2>2025</h2>
 
@@ -98,6 +133,9 @@
     </div>
 
     <hr>
+
+    <div class="year-block">
+    <img class="year-image" src="assets/edward.jpeg" alt="Artwork for 2026 reading list">
 
     <h2>2026</h2>
 
