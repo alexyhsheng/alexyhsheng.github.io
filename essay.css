@@ -1,0 +1,167 @@
+/* Essay pages: minimal academic-site frame, with book-like text formatting. */
+body {
+  background-color: #f9f9f9;
+  font-size: 24px;
+  margin-left: 24px;
+  line-height: 1.4;
+}
+
+a { color: #410595; }
+
+hr {
+  max-width: 2000px;
+  margin-left: 0 auto;
+}
+
+
+/* The column stays left-aligned, rather than centered. */
+.essay {
+  max-width: 1000px;
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Songti SC", Georgia, serif;
+  font-size: 23px;
+  line-height: 1.6;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+.essay p {
+  margin: 0 0 1.2em;
+}
+
+header h1 {
+  margin-bottom: 0.1em;
+  text-align: center;
+}
+
+header p {
+  margin-top: 0;
+}
+
+.essay h2 {
+  font-size: 1.3em;
+  line-height: 1.3;
+  margin: 2.7em 0 1em;
+}
+
+.essay .epigraph {
+  margin: 1.8em 0 2.8em;
+}
+
+.essay .epigraph-text {
+  margin-bottom: 0.3em;
+}
+
+.essay .epigraph-source {
+  text-align: right;
+}
+
+.essay blockquote {
+  margin: 1.2em 1.7em;
+  line-height: 1.5;
+}
+
+.essay .quote-translation {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.essay figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.essay figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.essay .essay-figure img {
+  width: 75%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.essay .image-grid {
+  display: grid;
+  gap: 14px;
+  margin: 2em 0;
+}
+
+.essay .image-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.essay .image-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.essay .image-grid figure { margin: 0; }
+.essay .image-grid img { width: 100%; object-fit: cover; }
+.essay .image-grid.cols-2 img { aspect-ratio: 16 / 9; }
+.essay .image-grid.cols-3 img { aspect-ratio: 4 / 3; }
+
+.essay figcaption {
+  margin-top: 0.5em;
+  font-size: 0.78em;
+  line-height: 1.35;
+  color: #666;
+  font-style: italic;
+}
+
+.essay .scene-break {
+  text-align: center;
+  margin: 1.6em 0;
+}
+
+.essay sup { line-height: 0; }
+.essay sup a, .essay .reversefootnote { text-decoration: none; }
+
+.essay .footnotes {
+  font-size: 0.76em;
+  line-height: 1.45;
+}
+
+.essay .footnotes ol { padding-left: 1.5em; }
+.essay .footnotes li { margin-bottom: 0.6em; }
+.essay .reading-divider { margin: 2.5em 0 1.2em; }
+
+@media (max-width: 650px) {
+  body { margin-left: 16px; margin-right: 16px; font-size: 20px; }
+  .essay { font-size: 19px; line-height: 1.55; }
+  .essay blockquote { margin: 1.2em 0.6em; }
+  .essay .essay-figure img { width: 100%; }
+  .essay .image-grid.cols-2,
+  .essay .image-grid.cols-3 { grid-template-columns: 1fr; }
+}
+
+/* Epigraph spacing */
+.essay .epigraph {
+  margin: 1.8em 0 0;
+  display: flow-root;
+}
+
+.essay .epigraph p {
+  margin: 0;
+}
+
+.essay .epigraph .epigraph-text {
+  margin-bottom: 0.3em;
+}
+
+.essay .epigraph .epigraph-source {
+  text-align: right;
+}
+
+/* Divider spacing */
+.essay .epigraph-divider {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  color: #666;
+
+  margin: 0;
+  padding: 50px 0 50px;
+}
+
+/* Remove default spacing above first chapter */
+.essay .epigraph-divider + h2 {
+  margin-top: 0;
+}

@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Other writings</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="page-writing">
-    <div class="page">
-      <header class="header">
-        <div class="header-left">
-          <span class="site-title">Other writings</span>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-math writings - Alex Sheng</title>
+  <!-- Same minimal styling as index.html -->
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-size: 24px;
+      margin-left: 24px;
+      line-height: 1.4;
+    }
 
-        <nav class="header-nav">
-          <a href="https://alexyhsheng.github.io">home</a>
-        </nav>
-      </header>
+    h1 small {font-size: 0.6em;}
 
-      <hr />
+    a { color: #410595; }
 
-      <main id="home" class="writing-content">
-        <img
-          class="profile-photo"
-          src="assets/zurn.jpeg"
-          alt="zurn"
-          style="width: 30%; aspect-ratio: 1500 / 1114; object-fit: contain; margin-left: 70px;"
-        />
+    /* Keep the picture close to the left-aligned biography, not at the edge of the screen. */
+    .introduction {
+      max-width: 1600px;
+      display: flow-root;
+    }
 
-        <p>They are mostly prose or scholarly articles that concern music, travelling, and philosophy. Some of them were written originally in Chinese and later translated into English.</p>
-            <ul>
-        
-            <li><a href="https://mp.weixin.qq.com/s/K0vdqdfcJRZUDZi4XtCzaw">火：写在利西亚之后</a></li>
-            <a href="https://alexyhsheng.github.io/fire.html">A Lycian Fire</a> (English version)<br>
-            <br />
+    hr {
+     max-width: 1600px;
+      margin-left: 0;
+    }
 
-            <li><a href="https://mp.weixin.qq.com/s/KJo3p51YZrSRkcpyLNwfKA">感恩节旅行：穿越八州的记忆</a></li>
-            <a href="https://alexyhsheng.github.io/snow.html">And the Snow Falls</a> (English version)<br>
-            <br/>
-            
-            <li><a href="https://mp.weixin.qq.com/s/hb6uCDo63NVmy11uM9QkWg">精神的归程——贝多芬降A大调第三十一号奏鸣曲Op. 110的演奏与哲学解读</a></li>
-            <li><a href="https://mp.weixin.qq.com/s/GmaqEDY9dhYV3VYhS5qB7w">追寻钟声的脚步</a></li>
-            </ul>
+    li {
+      margin-bottom: 1.2em;
+    }
 
-        <hr class="reading-divider" style="margin-top: 48px;" />
+    .portrait {
+      float: right;
+      width: 425px;
+      max-width: 35%;
+      height: auto;
+      margin: 0 0 1em 1.5em;
+    }
 
-        <p><span class="tiny-text"><a href="https://alexyhsheng.github.io/reading.html">Reading List</a></span></p>
+    @media (max-width: 600px) {
+      .portrait {
+        float: none;
+        display: block;
+        max-width: 100%;
+        margin: 0 0 1em 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Non-math writings</h1>
+  </header>
 
-      </main>
+  <hr>
 
+  <main>
+    <div class="introduction">
+      <img class="portrait" src="p4.jpeg" alt="Artwork accompanying the writings page" width="260">
+
+      <p>They are mostly prose or scholarly articles that concern music, travelling, and philosophy. They are all in Chinese; some of them have been translated into English by myself.</p>
+
+      <ul>
+        <li>
+          <a href="https://mp.weixin.qq.com/s/K0vdqdfcJRZUDZi4XtCzaw">火：写在利西亚之后</a><br>
+          <a href="fire.html">A Lycian Fire</a> (English version)
+        </li>
+
+        <li>
+          <a href="https://mp.weixin.qq.com/s/KJo3p51YZrSRkcpyLNwfKA">感恩节旅行：穿越八州的记忆</a><br>
+          <a href="snow.html">And the Snow Falls</a> (English version)
+        </li>
+        <li><a href="https://mp.weixin.qq.com/s/hb6uCDo63NVmy11uM9QkWg">精神的归程：贝多芬降A大调第三十一号奏鸣曲Op. 110的演奏与哲学解读</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/GmaqEDY9dhYV3VYhS5qB7w">追寻钟声的脚步</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/_mw-4QJDOKoSm0dVjGMLqg">幻想曲式：北德管风琴学派与巴赫</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/M27uN_ACzHyyAs8nz0CaPQ">一篇德语翻译练习：Pièce d'Orgue，BWV 572</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/_wPQFxA-l9xM0IVSPOoOIg">暴风雨中的哲思：分析贝多芬d小调第十七号钢琴奏鸣曲，Op. 31, No. 2</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/fJoZPYdE78a8X_m-7FSiKA">简谈一部英国歌剧的文学和社会背景：Acis and Galatea</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/u02q53_oja9-kzzsNoW30g">听弹拉赫《肖邦主题变奏曲》Op. 22</a></li>
+
+      </ul>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+
+  </main>
+
+  <hr>
+
+  <p><a href="index.html">home</a></p>  
+</body>
 </html>
